@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+@font-face {
+    font-family: "Teuton Normal";
+    src: url("Teuton-Bold.otf"); /* Pastikan file font ini ada di folder */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Judul */
+.judul {
+    font-family: "Teuton Normal", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* QRIS */
+.qris-container {
+    position: relative;
+}
+
+.qris {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Teks Akhir */
+.teks-akhir {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efek animasi ketika ditekan */
+.qris:active {
+    transform: scale(1.1);
+}
+
+/* Partikel */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: moveUp 0.7s ease-out;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
